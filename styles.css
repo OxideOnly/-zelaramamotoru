@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.hizliresim.com/qp533lk.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: url('https://i.hizliresim.com/fqasq3q.png'), auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+#datetime {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#datetime .time {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+#datetime .date {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 48px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.search-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    padding-left: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.social-btn i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.social-btn.youtube:hover {
+    background-color: #FF0000;
+}
+
+.social-btn.instagram:hover {
+    background-color: #E4405F;
+}
+
+.social-btn.tiktok:hover {
+    background-color: #69C9D0;
+}
+
+.social-btn.discord:hover {
+    background-color: #7289DA;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 64px;
+    }
+
+    .search-input {
+        font-size: 18px;
+    }
+
+    .social-btn {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .social-btn i {
+        font-size: 32px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-input {
+        width: 500px;
+    }
+
+    .social-btn {
+        width: 120px;
+        height: 120px;
+        font-size: 18px;
+    }
+
+    .social-btn i {
+        font-size: 32px;
+    }
+}
