@@ -48,7 +48,7 @@ function updateDateTime() {
     var timeString = hours + ':' + minutes;
     var dateString = day + ' ' + month + ' ' + year;
 
-    document.getElementById('datetime').innerHTML = '<span class="time">' + timeString + '</span>' + '<span class="date">' + dateString + '</span>';
+    document.getElementById('datetime').innerHTML = '<span class="time">' + timeString + '</span>' + '<span class="date" style="margin-left: 10px;">' + dateString + '</span>';
 }
 
 setInterval(updateDateTime, 1000);
@@ -57,4 +57,21 @@ updateDateTime();
 
 window.addEventListener('load', function() {
     document.querySelector('.search-input').value = '';
+});
+
+document.getElementById('menu-button').addEventListener('click', function(event) {
+    event.stopPropagation();
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.classList.toggle('active');
+});
+
+document.addEventListener('click', function(event) {
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    if (dropdownMenu.classList.contains('active')) {
+        dropdownMenu.classList.remove('active');
+    }
+});
+
+document.getElementById('dropdown-menu').addEventListener('click', function(event) {
+    event.stopPropagation();
 });
